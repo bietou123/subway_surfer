@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.subwaysurfer.game"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!-- 游戏完全离线，不声明任何权限：
+         界面全屏常亮由 FLAG_KEEP_SCREEN_ON 实现，无需 WAKE_LOCK；
+         不联网、不震动、不读写外部存储。 -->
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="34" />
+
+    <application
+        android:label="地铁跑酷"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        android:hardwareAccelerated="true"
+        android:allowBackup="false"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="地铁跑酷"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|navigation"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
